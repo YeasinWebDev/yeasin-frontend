@@ -1,11 +1,14 @@
-import Navbar from '@/components/common/Navbar'
+import Hero from "@/components/home/Hero";
 
 function page() {
   return (
-    <>
-    <Navbar/>
-    </>
-  )
+    <div>
+      <Hero />
+      <div className="container mx-auto">
+
+      </div>
+    </div>
+  );
 }
 
-export default page
+export default page;

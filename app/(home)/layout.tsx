@@ -1,3 +1,5 @@
+import Navbar from "@/components/common/Navbar";
+
 export default function HomeLayout({
   children,
 }: Readonly<{
@@ -5,7 +7,10 @@ export default function HomeLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

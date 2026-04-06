@@ -32,7 +32,7 @@ const Navbar = () => {
       <div
         className="absolute bottom-0 left-0 w-full h-[1px]"
         style={{
-          background: "linear-gradient(to right, transparent, #6366f1, transparent)",
+          background: "linear-gradient(to right, transparent, #2466F2 , transparent)",
         }}
       />
 
@@ -43,7 +43,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex md:items-center md:space-x-8">
+          <div className="hidden lg:flex md:items-center md:space-x-8 ml-[9rem]">
             {navItems.map((item) => (
               <Link key={item.name} href={item.href} className="dark:text-[#D0D5D9] text-[0.938rem]">
                 {item.name}

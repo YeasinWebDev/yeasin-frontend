@@ -72,7 +72,7 @@ function Curriculum() {
   };
 
   return (
-    <div className="flex items-center justify-center flex-col mt-40">
+    <div id="curriculum" className="flex items-center justify-center flex-col pt-40">
       <motion.div
         variants={fadeUp}
         initial="hidden"

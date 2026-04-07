@@ -55,7 +55,7 @@ function Testimonials() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div id='testimonials' className="flex flex-col items-center justify-center pt-20">
       <Badge text="Testimonials" />
 
       <h2 className="text-[2.5rem] md:text-[2.75rem] lg:text-[3.25rem] font-medium dark:text-[#E0E3E5] my-8 w-[78%] md:w-[50%] 2xl:w-[45%] text-center leading-14">
@@ -84,25 +84,25 @@ function Testimonials() {
         </div>
 
         <Swiper
-  modules={[Navigation]}
-  spaceBetween={20}
-  slidesPerView={3.5}
-  navigation={{
-    prevEl: prevRef.current,
-    nextEl: nextRef.current,
-  }}
-  onInit={(swiper: SwiperType) => {
-    if (!swiper.params.navigation) return;
+          modules={[Navigation]}
+          spaceBetween={20}
+          slidesPerView={3.5}
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          onInit={(swiper: SwiperType) => {
+            if (!swiper.params.navigation) return;
 
-    const navigation = swiper.params.navigation as any;
+            const navigation = swiper.params.navigation as any;
 
-    navigation.prevEl = prevRef.current;
-    navigation.nextEl = nextRef.current;
+            navigation.prevEl = prevRef.current;
+            navigation.nextEl = nextRef.current;
 
-    swiper.navigation.init();
-    swiper.navigation.update();
-  }}
->
+            swiper.navigation.init();
+            swiper.navigation.update();
+          }}
+        >
           {data.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="rounded-xl p-[1px] bg-gradient-to-br from-[#2466F2] via-transparent to-[#2466F2] w-[19.25rem] group relative overflow-hidden cursor-pointer">
@@ -129,7 +129,7 @@ function Testimonials() {
       </div>
 
       {/* pricing */}
-      <div className="flex items-start justify-center gap-5 flex-col xl:flex-row my-28">
+      <div id='pricing' className="flex items-start justify-center gap-5 flex-col xl:flex-row py-28">
         <div className=" dark:bg-[#111214] bg-white w-[90%] mx-auto md:w-[27.625rem] h-[35.625rem] rounded-xl flex flex-col items-start justify-center py-4 px-15">
           <Badge text="Introducing" />
           <h2 className="text-[2rem] md:text-[2.25rem] lg:text-[2.5rem] dark:text-[#E0E3E5] font-medium leading-14 pb-2">

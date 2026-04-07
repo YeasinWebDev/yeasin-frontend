@@ -31,7 +31,7 @@ function Blueprint() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center mt-40">
+    <div id="overview" className="flex flex-col items-center justify-center pt-40">
       <Badge text="The Deep Work Blueprint" />
 
       <motion.h2

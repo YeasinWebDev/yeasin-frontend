@@ -1,3 +1,4 @@
+import Blueprint from "@/components/home/Blueprint";
 import Hero from "@/components/home/Hero";
 import WhyUs from "@/components/home/WhyUs";
 
@@ -7,6 +8,7 @@ function page() {
       <Hero />
       <div className="container mx-auto mt-40">
         <WhyUs />
+        <Blueprint/>
       </div>
     </div>
   );

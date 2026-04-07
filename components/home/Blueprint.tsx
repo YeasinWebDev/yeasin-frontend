@@ -52,7 +52,7 @@ function Blueprint() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: index * 0.2 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="relative flex gap-6 h-[12rem] ml-40"
+            className="relative flex gap-6 h-[12rem] ml-10 md:ml-60 lg:ml-40"
           >
             {/* Line */}
             <div
@@ -76,7 +76,7 @@ function Blueprint() {
               </div>
 
               {/* Text */}
-              <p className="dark:text-[#D0D5D9] text-[1.5rem] leading-8 w-[55%] ml-10">
+              <p className="dark:text-[#D0D5D9] text-[1.5rem] leading-8 w-[85%] md:w-[55%] ml-10">
                 {item.text}
               </p>
             </div>

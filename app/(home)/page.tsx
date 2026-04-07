@@ -1,4 +1,5 @@
 import Blueprint from "@/components/home/Blueprint";
+import Curriculum from "@/components/home/Curriculum";
 import Hero from "@/components/home/Hero";
 import WhyUs from "@/components/home/WhyUs";
 
@@ -9,6 +10,7 @@ function page() {
       <div className="container mx-auto mt-40">
         <WhyUs />
         <Blueprint/>
+        <Curriculum/>
       </div>
     </div>
   );

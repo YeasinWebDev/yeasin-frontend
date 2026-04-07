@@ -7,12 +7,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
 import { FaPlay } from "react-icons/fa6";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { BsFillPatchPlusFill, BsPatchPlus } from "react-icons/bs";
+import type { Swiper as SwiperType } from "swiper";
 
 function Testimonials() {
   const prevRef = useRef(null);
@@ -69,14 +69,14 @@ function Testimonials() {
           <div className="flex items-center gap-3">
             <button
               ref={prevRef}
-              className="w-10 h-10 rounded-full bg-[#171B21] flex items-center justify-center dark:text-white text-black hover:bg-[#2466F2] hover:text-white transition"
+              className="w-10 h-10 rounded-full dark:bg-[#171B21] bg-[#D0D5D9] flex items-center justify-center dark:text-white text-black cursor-pointer transition"
             >
               <IoIosArrowBack />
             </button>
 
             <button
               ref={nextRef}
-              className="w-10 h-10 rounded-full bg-[#171B21] flex items-center justify-center dark:text-white text-black hover:bg-[#2466F2] hover:text-white transition"
+              className="w-10 h-10 rounded-full dark:bg-[#171B21] bg-[#D0D5D9] flex items-center justify-center dark:text-white text-black cursor-pointer transition"
             >
               <IoIosArrowForward />
             </button>
@@ -84,26 +84,25 @@ function Testimonials() {
         </div>
 
         <Swiper
-          modules={[Navigation]}
-          spaceBetween={20}
-          slidesPerView={3.5}
-          navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
-          }}
-          onInit={(swiper) => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-            swiper.navigation.init();
-            swiper.navigation.update();
-          }}
-          breakpoints={{
-            320: { slidesPerView: 1 },
-            640: { slidesPerView: 2.2 },
-            1024: { slidesPerView: 3 },
-            1280: { slidesPerView: 3.5 },
-          }}
-        >
+  modules={[Navigation]}
+  spaceBetween={20}
+  slidesPerView={3.5}
+  navigation={{
+    prevEl: prevRef.current,
+    nextEl: nextRef.current,
+  }}
+  onInit={(swiper: SwiperType) => {
+    if (!swiper.params.navigation) return;
+
+    const navigation = swiper.params.navigation as any;
+
+    navigation.prevEl = prevRef.current;
+    navigation.nextEl = nextRef.current;
+
+    swiper.navigation.init();
+    swiper.navigation.update();
+  }}
+>
           {data.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="rounded-xl p-[1px] bg-gradient-to-br from-[#2466F2] via-transparent to-[#2466F2] w-[19.25rem] group relative overflow-hidden cursor-pointer">

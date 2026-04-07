@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { sfProDisplay } from "./font";
 import { ThemeProvider } from "@/components/theme-provider";
+import "swiper/css";
+import "swiper/css/navigation";
 
 export const metadata: Metadata = {
   title: "Create Next App",

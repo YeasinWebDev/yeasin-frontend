@@ -88,7 +88,7 @@ function Curriculum() {
         </h2>
       </motion.div>
 
-      <div className="flex items-start justify-center gap-10 my-20">
+      <div className="flex items-start justify-center gap-10 my-20 flex-col lg:flex-row">
         {/*  left */}
         <motion.div
           variants={fadeUp}
@@ -96,7 +96,7 @@ function Curriculum() {
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-          className="w-[28.75rem] mx-auto p-4"
+          className="w-full md:w-[28.75rem] mx-auto p-4"
         >
           <Accordion type="single" collapsible defaultValue="module-0">
             {modules.map((module, index) => (
@@ -163,9 +163,9 @@ function Curriculum() {
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
-          className="rounded-xl p-px bg-gradient-to-br from-[#2466F2] via-transparent to-[#2466F2] w-fit"
+          className="rounded-xl p-px bg-gradient-to-br from-[#2466F2] via-transparent to-[#2466F2] w-[90%] md:w-fit mx-auto"
         >
-          <div className="bg-[#ffffff] dark:bg-[#111214] w-[26.25rem] h-[29.938rem] p-6 rounded-xl relative flex flex-col items-start justify-between">
+          <div className="bg-[#ffffff] dark:bg-[#111214]  md:w-[26.25rem] h-[29.938rem] p-4 md:p-6 rounded-xl relative flex flex-col items-start justify-between">
             <h3 className="text-[1.5rem] md:text-[1.75rem] font-medium dark:text-[#D0D5D9]">Not only video lessons!</h3>
 
             <div>

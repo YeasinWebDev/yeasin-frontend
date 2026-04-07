@@ -73,7 +73,7 @@ function WhyUs() {
         />
       </motion.div>
 
-      <div className="flex items-center justify-center gap-4 mt-40 w-full h-full">
+      <div className="flex items-center justify-center gap-4 mt-40 w-full h-full ">
         <motion.img
           initial={{ opacity: 0, scale: 0.8, y: 50 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -89,7 +89,7 @@ function WhyUs() {
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.5 }}
         viewport={{ once: true, amount: 0.3 }}
-        className="w-[90%] xl:w-[32.5rem] h-[40.125rem] relative bg-[#ffffff] dark:bg-[#111214] rounded-xl p-6">
+        className="w-[90%] xl:w-[32.5rem] h-[40.125rem] relative bg-[#ffffff] dark:bg-[#111214] rounded-xl md:p-6 p-4">
           <div className="flex md:items-center items-start justify-between flex-col md:flex-row gap-8 md:gap-0">
             <Badge text="No worries" />
 
@@ -108,12 +108,12 @@ function WhyUs() {
                   <AvatarFallback>ER</AvatarFallback>
                 </Avatar>
               </AvatarGroup>
-              <span className="text-[0.938rem] text-[#F9F9F9 ] dark:text-[#D0D5D9]">Join with 5K other students</span>
+              <span className="text-[0.938rem] text-[#F9F9F9 ] dark:text-[#D0D5D9] mt-2">Join with 5K other students</span>
             </div>
           </div>
 
-          <div className="absolute flex items-center justify-between bottom-5 w-full left-0 px-6">
-            <div className="w-[50%] flex-col flex gap-2">
+          <div className="absolute flex flex-col md:flex-row md:items-center justify-between bottom-5 w-full left-0 px-6">
+            <div className="w-[90%] md:w-[50%] flex-col flex gap-2">
               <span className="text-[1.063rem] text-gray-700 dark:text-[#AAAEB2]">
                 The ability to concentrate <br /> deeply is the ultimate productivity hack
               </span>{" "}
@@ -123,10 +123,10 @@ function WhyUs() {
               </span>
             </div>
 
-            <div>
-              <img src="/images/home/image-5.png" alt="image-6" className="w-[7.375rem] h-[7.5rem] object-cover rounded-xl mt-6" />
-              <img src="/images/home/image-3.png" alt="image-6" className="w-[7.375rem] h-[7.5rem] object-cover rounded-xl mt-6" />
-              <img src="/images/home/image-1.png" alt="image-6" className="w-[7.375rem] h-[7.5rem] object-cover rounded-xl mt-6" />
+            <div className="flex  md:flex-col gap-2">
+              <img src="/images/home/image-5.png" alt="image-6" className="w-[6.25rem] h-[6.875rem] md:w-[7.375rem] md:h-[7.5rem] object-cover rounded-xl mt-6" />
+              <img src="/images/home/image-3.png" alt="image-6" className="w-[6.25rem] h-[6.875rem] md:w-[7.375rem] md:h-[7.5rem] object-cover rounded-xl mt-6" />
+              <img src="/images/home/image-1.png" alt="image-6" className="w-[6.25rem] h-[6.875rem] md:w-[7.375rem] md:h-[7.5rem] object-cover rounded-xl mt-6" />
             </div>
           </div>
         </motion.div>
